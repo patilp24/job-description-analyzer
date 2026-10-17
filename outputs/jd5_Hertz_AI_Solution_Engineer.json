@@ -3,29 +3,22 @@
   "company": "Hertz",
   "seniority": "Early-career",
   "years_experience_required": "2+ years",
-  "salary": "$90k depending on experience",
+  "salary": "starts at $90k depending on experience",
   "work_model": null,
-  "required_skills": [
-    "Python",
-    "SQL",
-    "Databricks",
-    "AI",
-    "working with messy data",
-    "finding patterns and insights",
-    "building AI agents",
-    "building apps",
-    "building automated workflows and pipelines",
-    "production deployment and monitoring",
-    "communication with business teams"
+  "required_qualifications": [
+    "Bachelors in a technical field",
+    "2+ years SQL experience",
+    "Strong Python skills",
+    "Experience working with messy data from different places, finding patterns and insights, building AI agents, apps, automated workflows and pipelines",
+    "Ability to make sure things actually work in production and measure if they save money or time",
+    "Curious, flexible, good at solving problems and communicating with business teams"
   ],
-  "preferred_skills": [
-    "Databricks",
-    "Spark",
-    "cloud",
-    "AI coding tools"
+  "preferred_qualifications": [
+    "Databricks experience",
+    "Spark experience",
+    "Cloud experience",
+    "AI coding tools experience"
   ],
-  "red_flags": [
-    "vague duties"
-  ],
+  "red_flags": [],
   "sponsorship": "Not mentioned"
 }

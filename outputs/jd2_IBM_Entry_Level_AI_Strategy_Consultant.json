@@ -4,26 +4,18 @@
   "seniority": "Mid",
   "years_experience_required": null,
   "salary": null,
-  "work_model": "Hybrid",
-  "required_skills": [
-    "Strategy",
-    "transformation",
-    "operations",
-    "Technology",
-    "product development",
-    "analytics",
-    "Finance",
-    "value creation",
-    "operating model design",
-    "AI",
-    "automation",
-    "workflow modernization"
+  "work_model": "On-site",
+  "required_qualifications": [
+    "High-performing candidate drawn to the intersection of AI, strategy, product, and enterprise transformation",
+    "Experience in strategy, transformation, or operations; technology, product development, or analytics; finance, value creation, or operating model design; AI, automation, or workflow modernization",
+    "Thrive in ambiguity and design from first principles",
+    "Communicate with structure, clarity, and executive-level precision",
+    "Understand how systems, people, and technology interact",
+    "Operate with high ownership, intellectual curiosity, and a bias for action"
   ],
-  "preferred_skills": [],
-  "red_flags": [
-    "no salary listed",
-    "vague duties",
-    "missing key details"
+  "preferred_qualifications": [
+    "Master's Degree"
   ],
+  "red_flags": [],
   "sponsorship": "Not mentioned"
 }

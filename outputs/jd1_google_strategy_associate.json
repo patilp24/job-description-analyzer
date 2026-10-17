@@ -1,36 +1,26 @@
+```json
 {
   "job_title": "Strategy and Operations Associate",
   "company": "Google",
   "seniority": "Early-career",
   "years_experience_required": "2 years",
   "salary": "$95000 - $136000 (USD) + 15% bonus target + equity + benefits",
-  "work_model": "Hybrid",
-  "required_skills": [
-    "management consulting",
-    "business strategy",
-    "investment banking",
-    "venture capital",
-    "private equity",
-    "working with clients, executives, or other partners",
-    "developing business strategies",
-    "executing cross-functional initiatives"
+  "work_model": null,
+  "required_qualifications": [
+    "Bachelor's degree or equivalent practical experience.",
+    "2 years of experience in a management consulting, business strategy, investment banking, venture capital, or private equity role.",
+    "Experience working with clients, executives, or other partners.",
+    "Experience developing business strategies or executing cross-functional initiatives."
   ],
-  "preferred_skills": [
-    "distinctive business judgment",
-    "rigorous problem-solving",
-    "quantitative analysis",
-    "communicating findings to senior management",
-    "SQL",
-    "statistical analysis",
-    "predictive modeling",
-    "spreadsheet software",
-    "marketing capabilities",
-    "working across teams",
-    "building relationships",
-    "influencing senior managers",
-    "tolerance for ambiguity",
-    "market, product, organizational and cross-functional nuances"
+  "preferred_qualifications": [
+    "Experience in a role requiring distinctive business judgment, rigorous problem-solving, quantitative analysis, and communicating findings to senior management.",
+    "Experience with analytical tools/techniques (SQL, statistical analysis, predictive modeling, spreadsheet software).",
+    "Familiarity with how marketing capabilities come together to drive impact.",
+    "Ability to work across teams, build relationships, and influence senior managers.",
+    "Tolerance for ambiguity and ability to work in a fast-changing environment.",
+    "Possess foundational understanding of market, product, organizational and cross-functional nuances with an awareness of when to seek additional support and guidance."
   ],
   "red_flags": [],
   "sponsorship": "Not mentioned"
 }
+```

@@ -16,27 +16,36 @@ PROMPT_TEMPLATE = """You are an expert career analyst. Extract key facts from th
 delimited by <posting></posting> tags.
 
 Rules:
-- Use ONLY information stated in the posting. Never guess or invent.
+- Use ONLY information explicitly stated in the posting. Never guess or invent.
 - If a field is not mentioned, use null (for single values) or [] (for lists).
-- Keep "required_skills" and "preferred_skills" separate, exactly as the posting divides them.
+- "required_qualifications": everything the posting marks as required/minimum,
+  INCLUDING degrees and years of experience. "preferred_qualifications": everything
+  marked preferred/nice-to-have. Each item must appear in only ONE list.
+  If the posting has no explicit required section, put items under preferred.
 - Seniority must be one of: "Entry" (0-1 yrs), "Early-career" (1-3 yrs),
-  "Mid" (3-5 yrs), "Senior" (5+ yrs). Base it on required years of experience;
-  if no years are stated, infer from the title and responsibilities.
+  "Mid" (3-5 yrs), "Senior" (5+ yrs).
+  Use stated years first. "Several years" = "Mid".
+  If no years are stated, use the title: "Senior", "Staff", "Lead", "Principal" = "Senior";
+  "Associate", "Junior", "Entry", "Graduate" = "Entry" or "Early-career".
+  Never choose "Senior" unless the title or years clearly say so.
+- work_model must be one of "Remote", "Hybrid", "On-site", or null.
+  Use null unless the posting explicitly states it.
 - Sponsorship must be one of: "Offered", "Not offered", "Not mentioned".
-- Red flags are warning signs about the posting itself, such as: no salary listed,
-  unrealistic experience for the level, vague duties, an extremely broad required
-  tech stack, or missing key details. Hybrid or on-site work is NOT a red flag.
+- red_flags: specific concerns about THIS posting, each explaining the evidence
+  (e.g., "Master's preferred for an entry-level role"). Do not use generic phrases.
+  Hybrid or on-site work is NOT a red flag. Return [] if there are none.
 
 Return ONLY valid JSON with exactly these keys, and no other text:
 {{
   "job_title": string,
   "company": string or null,
   "seniority": string,
+  "Educationsl Requirements": string,
   "years_experience_required": string or null,
   "salary": string or null,
   "work_model": string or null,
-  "required_skills": [string],
-  "preferred_skills": [string],
+  "required_qualifications": [string],
+  "preferred_qualifications": [string],
   "red_flags": [string],
   "sponsorship": string
 }}
