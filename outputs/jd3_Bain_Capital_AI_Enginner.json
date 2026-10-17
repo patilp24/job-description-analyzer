@@ -5,25 +5,23 @@
   "years_experience_required": "Several years",
   "salary": null,
   "work_model": null,
+  "education_required": "BS or MS in Computer Science, Data Science, Machine Learning, or a related technical field",
+  "education_preferred": null,
   "required_qualifications": [
-    "AI Engineering: Advanced proficiency in Python for both backend engineering of web applications and AI/ML model development.",
-    "Agentic AI Systems: Experience deploying AI agents capable of planning, reasoning, and executing complex tasks with minimal human intervention.",
-    "RAG: Experience integrating advanced search/vector databases (e.g., Pinecone) to enhance AI performance.",
-    "Cloud & DevOps: Experience with AWS (e.g. EC2, EKS, S3, Lambda), containerization (e.g. Docker, Kubernetes), and infrastructure-as-code (e.g. Terraform).",
-    "Data Engineering: Strong understanding of data workflows and distributed computing frameworks for large-scale data ingestion, preprocessing, and feature engineering.",
-    "Education: BS or MS in Computer Science, Data Science, Machine Learning, or a related technical field.",
-    "Professional Experience: Several years of hands-on experience building and deploying machine learning or NLP solutions in a production environment.",
-    "Problem-Solving & Analysis: Demonstrated ability to create business value by applying machine learning algorithms and methods to complex, real-world scenarios.",
-    "Self-Starter: Ability to operate independently in a dynamic environment; comfortable taking ownership and driving projects to completion.",
-    "Adaptability: Comfortable with rapid iteration, pivoting strategies, and learning new technologies as needed.",
-    "Communication Skills: Strong verbal and written communication skills to effectively collaborate with technical and non-technical stakeholders.",
-    "Leadership & Teamwork: Proven ability to mentor junior team members, lead complex initiatives, and foster collaboration."
+    "Python proficiency",
+    "Agentic AI Systems",
+    "RAG and vector databases",
+    "AWS and DevOps tools",
+    "Data engineering and workflows",
+    "Machine learning production experience"
   ],
   "preferred_qualifications": [
-    "MLOps Tools: Familiarity with CI/CD pipelines for machine learning, experiment tracking (e.g., MLflow, Weights & Biases), and model deployment.",
-    "Traditional ML Models: Experience deploying and optimizing traditional machine learning models (e.g., XGBoost, Scikit-Learn).",
-    "Frontend Skills: Working knowledge of React or similar frameworks to build user-facing AI-driven applications."
+    "MLOps Tools",
+    "Traditional ML Models",
+    "Frontend Skills"
   ],
-  "red_flags": [],
+  "red_flags": [
+    "Salary missing or no upper range"
+  ],
   "sponsorship": "Not mentioned"
 }

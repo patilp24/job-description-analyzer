@@ -1,4 +1,3 @@
-```json
 {
   "job_title": "Strategy and Operations Associate",
   "company": "Google",
@@ -6,21 +5,24 @@
   "years_experience_required": "2 years",
   "salary": "$95000 - $136000 (USD) + 15% bonus target + equity + benefits",
   "work_model": null,
+  "education_required": "Bachelor's degree",
+  "education_preferred": null,
   "required_qualifications": [
-    "Bachelor's degree or equivalent practical experience.",
-    "2 years of experience in a management consulting, business strategy, investment banking, venture capital, or private equity role.",
-    "Experience working with clients, executives, or other partners.",
-    "Experience developing business strategies or executing cross-functional initiatives."
+    "Management consulting or business strategy",
+    "Investment banking or private equity",
+    "Client and executive partnership",
+    "Business strategy development",
+    "Cross-functional initiatives execution"
   ],
   "preferred_qualifications": [
-    "Experience in a role requiring distinctive business judgment, rigorous problem-solving, quantitative analysis, and communicating findings to senior management.",
-    "Experience with analytical tools/techniques (SQL, statistical analysis, predictive modeling, spreadsheet software).",
-    "Familiarity with how marketing capabilities come together to drive impact.",
-    "Ability to work across teams, build relationships, and influence senior managers.",
-    "Tolerance for ambiguity and ability to work in a fast-changing environment.",
-    "Possess foundational understanding of market, product, organizational and cross-functional nuances with an awareness of when to seek additional support and guidance."
+    "Quantitative analysis and problem-solving",
+    "SQL and statistical analysis",
+    "Predictive modeling and spreadsheet software",
+    "Marketing capabilities impact",
+    "Cross-team relationship building",
+    "Ambiguity tolerance in fast-changing environment",
+    "Market and product nuances understanding"
   ],
   "red_flags": [],
   "sponsorship": "Not mentioned"
 }
-```

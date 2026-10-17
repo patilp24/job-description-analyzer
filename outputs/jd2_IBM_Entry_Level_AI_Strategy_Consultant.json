@@ -1,21 +1,21 @@
 {
   "job_title": "AI-First Transformation Strategy Consultant",
   "company": "IBM",
-  "seniority": "Mid",
+  "seniority": "Unclear",
   "years_experience_required": null,
   "salary": null,
-  "work_model": "On-site",
-  "required_qualifications": [
-    "High-performing candidate drawn to the intersection of AI, strategy, product, and enterprise transformation",
-    "Experience in strategy, transformation, or operations; technology, product development, or analytics; finance, value creation, or operating model design; AI, automation, or workflow modernization",
-    "Thrive in ambiguity and design from first principles",
-    "Communicate with structure, clarity, and executive-level precision",
-    "Understand how systems, people, and technology interact",
-    "Operate with high ownership, intellectual curiosity, and a bias for action"
-  ],
+  "work_model": null,
+  "education_required": null,
+  "education_preferred": "Master's Degree",
+  "required_qualifications": [],
   "preferred_qualifications": [
-    "Master's Degree"
+    "Strategy, transformation, or operations",
+    "Technology, product development, or analytics",
+    "Finance, value creation, or operating model design",
+    "AI, automation, or workflow modernization"
   ],
-  "red_flags": [],
+  "red_flags": [
+    "Salary missing or no upper range"
+  ],
   "sponsorship": "Not mentioned"
 }

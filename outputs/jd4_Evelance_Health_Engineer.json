@@ -1,4 +1,3 @@
-```json
 {
   "job_title": "Engineer Senior",
   "company": null,
@@ -6,22 +5,26 @@
   "years_experience_required": "5 years",
   "salary": null,
   "work_model": "Hybrid",
+  "education_required": "BA/BS degree in Information Technology, Computer Science or related field",
+  "education_preferred": null,
   "required_qualifications": [
-    "BA/BS degree in Information Technology, Computer Science or related field of study",
-    "Minimum of 5 years related experience",
+    "5 years related experience",
     "Multi dimensional platform experience",
-    "Expert level experience with business and technical applications"
+    "Business and technical applications experience"
   ],
   "preferred_qualifications": [
-    "Strong engineering experience with hands-on experience or deep interest in AI engineering, Generative AI, LLM applications, automation, and applied machine learning",
-    "Experience designing, building, or integrating AI-enabled applications, including chatbots, copilots, intelligent search, document processing, recommendation systems, workflow automation, or decision-support solutions",
-    "Familiarity with LLM concepts such as prompt engineering, retrieval-augmented generation, embeddings, vector databases, model evaluation, responsible AI, guardrails, and production monitoring",
-    "Experience with modern software engineering practices, APIs, cloud platforms, data pipelines, and scalable application architecture",
-    "Experience evaluating or integrating AI platforms, Gen AI tools, automation technologies, or cloud-based AI services",
-    "Multi-database and/or multi-language experience",
-    "Experience mentoring others, leading multiple small projects, and providing troubleshooting support"
+    "AI engineering and Generative AI",
+    "LLM applications and automation",
+    "Applied machine learning",
+    "AI-enabled applications integration",
+    "Prompt engineering and RAG",
+    "Cloud platforms and APIs",
+    "Multi-database and multi-language",
+    "Mentoring and project leadership"
   ],
-  "red_flags": [],
+  "red_flags": [
+    "Salary missing or no upper range",
+    "Key details missing (company, location)"
+  ],
   "sponsorship": "Not mentioned"
 }
-```

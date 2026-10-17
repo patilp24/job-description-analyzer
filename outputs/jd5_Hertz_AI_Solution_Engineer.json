@@ -1,24 +1,29 @@
 {
   "job_title": "AI Solutions Engineer",
   "company": "Hertz",
+  "early-career": null,
   "seniority": "Early-career",
   "years_experience_required": "2+ years",
-  "salary": "starts at $90k depending on experience",
+  "salary": "Starts at $90k",
   "work_model": null,
+  "education_required": "Bachelors in a technical field",
+  "education_preferred": null,
   "required_qualifications": [
-    "Bachelors in a technical field",
-    "2+ years SQL experience",
-    "Strong Python skills",
-    "Experience working with messy data from different places, finding patterns and insights, building AI agents, apps, automated workflows and pipelines",
-    "Ability to make sure things actually work in production and measure if they save money or time",
-    "Curious, flexible, good at solving problems and communicating with business teams"
+    "Python",
+    "2+ years SQL",
+    "Databricks",
+    "AI",
+    "Work with messy data",
+    "Build AI agents and apps",
+    "Automated workflows and pipelines"
   ],
   "preferred_qualifications": [
-    "Databricks experience",
-    "Spark experience",
-    "Cloud experience",
-    "AI coding tools experience"
+    "Spark",
+    "Cloud",
+    "AI coding tools"
   ],
-  "red_flags": [],
+  "red_flags": [
+    "Salary missing or no upper range (starts at $90k)"
+  ],
   "sponsorship": "Not mentioned"
 }
