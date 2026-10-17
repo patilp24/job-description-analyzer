@@ -1,0 +1,87 @@
+About the job
+Introduction
+
+IBM’s AI-First Transformation organization is redefining how a global enterprise operates in the agentic AI era—designing workflows, operating models, and technology foundations that power the next generation of IBM.
+
+We are the group responsible for architecting IBM’s enterprise-wide transformation agenda, scaling AI solutions, and reimagining how work gets done across thousands of processes. Our mandate is to help IBM become the world’s benchmark AI-first enterprise.
+
+To date, the organization has delivered $4.5B in productivity gains, making IBM a standout performer in the MIT GenAI Divide study, where 95% of enterprises fail to move beyond pilots. IBM is the rare organization successfully scaling AI at material enterprise levels—and this team is at the center of that shift.
+
+This position sits inside one of IBM’s most strategic transformation engines.
+
+The position will be based either at our flagship IBM New York City office at One Madison Avenue or at IBM’s headquarters campus in Armonk, NY, roughly 30 miles north of New York City, depending on candidate preference.
+
+Your Role And Responsibilities
+
+As an AI-First Transformation Strategy Consultant, you will work with transformation leaders, technical product owners, data and AI experts, workflow specialists, and senior stakeholders across IBM accelerate IBM’s transformation.
+
+This Role Blends
+
+AI-informed product thinking
+Enterprise workflow redesign
+Strategic transformation & operating model architecture
+Value creation analysis and benchmarking
+Technology roadmap & experimentation strategy
+
+What You’ll Gain
+
+The opportunity to help transform one of the world’s most iconic technology companies
+Mastery of AI-native workflow design and enterprise operating model transformation
+Experience with critical decision-making forums across IBM
+Hands-on experience evaluating and experimenting with cutting-edge AI tools
+A portfolio tied directly to measurable enterprise value
+The ability to work at the forefront of AI-first transformation
+
+If you want to help define the blueprint for the AI-first enterprise, this is the place to do it.
+
+What You’ll Do
+
+ Reimagine Enterprise Workflows with AI
+Conduct deep workflow assessments across Finance, HR, Procurement, Operations, Sales, and other business domains
+Apply zero-based design to create AI-native workflows, not incremental fixes
+Identify opportunities for automation, GenAI, agentic systems, and intelligent orchestration
+Define future-state operating models and transformation playbooks
+ Advance AI Product Strategy & Experimentation
+Evaluate prototypes, tools, and platforms being developed or tested across IBM
+Lead or support experiments that test feasibility, scalability, and workflow integration
+Support design of MVPs and contribute to readiness assessments for scale
+Shape recommendations for build, integrate, or enhance decisions
+ Build Technology & Transformation Roadmaps
+Integrate business needs with data, infrastructure, and platform capabilities
+Translate cross-functional input into clear technology and AI enablement plans
+Develop multi-quarter transformation roadmaps across domains
+Engage with AI governance, risk, and prioritization mechanisms
+ Quantify Value Creation (Transformation & ROI)
+Develop value hypotheses and financial models for high-impact AI deployments
+Track KPIs and build tooling for visibility into impact and adoption
+Support prioritization decisions tied to enterprise value
+Prepare executive-caliber materials for leadership forums
+ Collaborate with Senior Stakeholders Across IBM
+Work closely with leaders across business units, technology groups, and transformation teams
+Create clear, insight-driven deliverables for executive reviews
+Participate in cross-functional sprints and enterprise transformation workstreams
+Help communicate transformation strategy and operating model shifts across IBM
+
+Preferred Education
+
+Master's Degree
+
+Required Technical And Professional Expertise
+
+Who You Are
+
+You are a high-performing candidate drawn to the intersection of AI, strategy, product, and enterprise transformation.
+
+You May Have Experience In
+
+Strategy, transformation, or operations
+Technology, product development, or analytics
+Finance, value creation, or operating model design
+AI, automation, or workflow modernization
+
+How You Think
+
+You thrive in ambiguity and design from first principles
+You communicate with structure, clarity, and executive-level precision
+You understand how systems, people, and technology interact
+You operate with high ownership, intellectual curiosity, and a bias for im

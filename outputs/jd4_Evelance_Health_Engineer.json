@@ -1,0 +1,22 @@
+{
+  "job_title": "Engineer Senior",
+  "company": null,
+  "seniority": "Senior",
+  "years_experience_required": "5 years",
+  "salary": null,
+  "work_model": "Hybrid",
+  "required_skills": [],
+  "preferred_skills": [
+    "AI engineering, Generative AI, LLM applications, automation, and applied machine learning",
+    "Designing, building, or integrating AI-enabled applications (chatbots, copilots, intelligent search, document processing, recommendation systems, workflow automation, or decision-support solutions)",
+    "LLM concepts (prompt engineering, retrieval-augmented generation, embeddings, vector databases, model evaluation, responsible AI, guardrails, and production monitoring)",
+    "Modern software engineering practices, APIs, cloud platforms, data pipelines, and scalable application architecture",
+    "Evaluating or integrating AI platforms, Gen AI tools, automation technologies, or cloud-based AI services",
+    "Multi-database and/or multi-language experience",
+    "Mentoring others, leading multiple small projects, and providing troubleshooting support"
+  ],
+  "red_flags": [
+    "No salary listed"
+  ],
+  "sponsorship": "Not mentioned"
+}

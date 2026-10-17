@@ -1,0 +1,7 @@
+- Title: AI Engineer (Data Science & AI, Bain Capital)
+- Seniority: Mid-level (several years of production experience, mentors junior engineers)
+- Salary: Not stated
+- Must-have: BS or MS in Computer Science/Data Science/Machine Learning or related technical field, several years building and deploying ML or NLP solutions in production, advanced Python (backend web apps and AI/ML development), deploying agentic AI systems, RAG with search/vector databases (e.g., Pinecone), AWS (EC2, EKS, S3, Lambda), containerization (Docker, Kubernetes), infrastructure-as-code (Terraform), data engineering and distributed computing frameworks, communication with technical and non-technical stakeholders, mentoring and leading initiatives
+- Preferred: MLOps (CI/CD for ML, MLflow, Weights & Biases, model deployment), traditional ML models (XGBoost, Scikit-Learn), frontend skills (React or similar)
+- Red flags: no salary listed, "several years" of experience not quantified, very broad required stack spanning ML, backend, DevOps, and data engineering
+- Sponsorship: Info given: No

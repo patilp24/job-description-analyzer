@@ -1,0 +1,42 @@
+About the job
+Location: This role requires associates to be in-office 1-2 days per week, fostering collaboration and connectivity, while providing flexibility to support productivity and work-life balance. This approach combines structured office engagement with the autonomy of virtual work, promoting a dynamic and adaptable workplace. Alternate locations may be considered if candidates reside within a commuting distance from an office.
+
+Please note that per our policy on hybrid/virtual work, candidates not within a reasonable commuting distance from the posting location(s) will not be considered for employment, unless an accommodation is granted as required by law.
+
+The Engineer Senior is responsible for delivery of end to end application, system development and maintenance on complex multi technology platforms within assigned client group, business unit or corporate department and utilizing various customer technology platforms.
+
+How You Will Make An Impact
+
+Researches, evaluates, and proposes new technologies, including Generative AI, LLM applications, automation frameworks, AI engineering practices, and applied machine learning solutions.
+Designs, develops, and supports scalable applications with a focus on Generative AI, intelligent automation, AI-assisted capabilities, LLM-powered workflows, and integration of emerging technologies where appropriate.
+Identifies, evaluates, and helps implement practical Gen AI use cases that improve business processes, customer experiences, engineering productivity, and operational efficiency.
+Supports the design and integration of AI-enabled applications, including chatbots, copilots, document processing solutions, knowledge search, workflow automation, and decision-support tools.
+Assesses current data, systems, and business processes to identify opportunities to leverage structured and unstructured data for Generative AI, analytics, automation, and applied machine learning.
+Provides technical guidance and mentoring to engineers on modern engineering practices, AI-enabled development patterns, automation, LLM application design, and applied machine learning concepts.
+Understands the tradeoffs between technical, analytical, AI, security, compliance, and product needs of technical solutions.
+Performs technical design reviews and code reviews, including review of AI-enabled solutions for scalability, maintainability, security, quality, observability, and responsible implementation.
+Supports vendor evaluation, including assessment of AI platforms, LLM tools, automation technologies, cloud services, and software engineering solutions.
+Maintains active relationships with customers and stakeholders to determine business requirements and leads requirements gathering meetings.
+Owns the change request process and may coordinate with other teams as necessary.
+Provides technical advice and contributes to technical decisions that impact cross-functional teams.
+Develops and defines application scope and objectives and prepares technical and/or functional specifications from which programs will be written.
+May own technical testing to ensure unit testing is completed and meets test plan requirements, system testing is completed, and the system is implemented according to plan.
+Maintains the technical development environment.
+Mentors others and may lead multiple small to medium-sized projects.
+Begins to set direction at the project or service level and influences decision-making.
+Identifies and proposes strategies around technical problems affecting the team, communicates standards, and gets buy-in on solutions.
+Facilitates group sessions to elicit complex information on requirements clarification, solution design, AI use case evaluation, code reviews, and troubleshooting issues.
+
+Minimum Requirements
+
+Requires an BA/BS degree in Information Technology, Computer Science or related field of study and a minimum of 5 years related experience; multi dimensional platform experience; expert level experience with business and technical applications, or any combination of education and experience, which would provide an equivalent background.
+
+Preferred Skills, Capabilities, And Experiences
+
+Strong engineering experience with hands-on experience or deep interest in AI engineering, Generative AI, LLM applications, automation, and applied machine learning prefrerred.
+Experience designing, building, or integrating AI-enabled applications, including chatbots, copilots, intelligent search, document processing, recommendation systems, workflow automation, or decision-support solutions is preferred.
+Familiarity with LLM concepts such as prompt engineering, retrieval-augmented generation, embeddings, vector databases, model evaluation, responsible AI, guardrails, and production monitoring is preferred.
+Experience with modern software engineering practices, APIs, cloud platforms, data pipelines, and scalable application architecture is preferred.
+Experience evaluating or integrating AI platforms, Gen AI tools, automation technologies, or cloud-based AI services is preferred.
+Multi-database and/or multi-language experience is strongly preferred.
+Experience mentoring others, leading multiple small projects, and providing troubleshooting support is preferred.

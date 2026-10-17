@@ -1,0 +1,7 @@
+- Title: Engineer Senior (company not named in posting)
+- Seniority: Senior (5+ yrs)
+- Salary: Not stated
+- Must-have: BA/BS in Information Technology, Computer Science or related field (or equivalent combination of education and experience), minimum 5 years related experience, multi-dimensional platform experience, expert-level experience with business and technical applications
+- Preferred: hands-on experience or deep interest in AI engineering/Generative AI/LLM applications/automation/applied ML, building or integrating AI-enabled applications (chatbots, copilots, intelligent search, document processing, recommendation systems, workflow automation, decision-support), familiarity with LLM concepts (prompt engineering, RAG, embeddings, vector databases, model evaluation, responsible AI, guardrails, production monitoring), modern software engineering practices (APIs, cloud platforms, data pipelines, scalable architecture), evaluating or integrating AI platforms/Gen AI tools/cloud AI services, multi-database and/or multi-language experience (strongly preferred), mentoring and leading small projects
+- Red flags: no salary listed, posting location not specified, hybrid role (in-office 1-2 days per week) and candidates outside commuting distance not considered, no specific tech stack required (AI skills are all preferred, not required)
+- Sponsorship: Info given: No

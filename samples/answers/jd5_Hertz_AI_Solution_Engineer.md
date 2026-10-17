@@ -1,0 +1,7 @@
+- Title: AI Solutions Engineer (Hertz)
+- Seniority: Early-career (2+ yrs)
+- Salary: Starts at $90,000 depending on experience + benefits (health insurance, 401k, PTO, parental leave, Hertz rental discounts)
+- Must-have: Bachelor's in a technical field, 2+ years SQL experience, strong Python, curious, flexible, good at problem-solving and communicating with business teams
+- Preferred: Databricks, Spark, cloud, AI coding tools
+- Red flags: vague, informal description ("AI stuff"), no upper end of salary range
+- Sponsorship: Info given: No

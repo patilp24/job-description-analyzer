@@ -1,0 +1,7 @@
+- Title: Strategy and Operations Associate (YouTube Marketing, Google)
+- Seniority: Early-career (2 yrs)
+- Salary: $95,000–$136,000 + 15% bonus target + equity + benefits
+- Must-have: Bachelor's degree or equivalent practical experience, 2 years in management consulting/business strategy/investment banking/venture capital/private equity, experience working with clients/executives/partners, experience developing business strategies or executing cross-functional initiatives
+- Preferred: business judgment and rigorous problem-solving, quantitative analysis, communicating findings to senior management, analytical tools (SQL, statistical analysis, predictive modeling, spreadsheets), familiarity with how marketing capabilities drive impact, building relationships and influencing senior managers, tolerance for ambiguity, foundational understanding of market/product/organizational nuances
+- Red flags: none obvious
+- Sponsorship: Info given: No

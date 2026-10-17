@@ -1,0 +1,31 @@
+
+{
+  "job_title": "AI Engineer",
+  "company": "Bain Capital",
+  "seniority": "Senior",
+  "years_experience_required": null,
+  "salary": null,
+  "work_model": null,
+  "required_skills": [
+    "Python",
+    "Agentic AI Systems",
+    "RAG",
+    "Vector databases (e.g., Pinecone)",
+    "AWS (e.g. EC2, EKS, S3, Lambda)",
+    "Containerization (e.g. Docker, Kubernetes)",
+    "Infrastructure-as-code (e.g. Terraform)",
+    "Data Engineering"
+  ],
+  "preferred_skills": [
+    "MLOps Tools",
+    "CI/CD pipelines for machine learning",
+    "Experiment tracking (e.g., MLflow, Weights & Biases)",
+    "Model deployment",
+    "Traditional ML Models (e.g., XGBoost, Scikit-Learn)",
+    "Frontend Skills (React or similar frameworks)"
+  ],
+  "red_flags": [
+    "No salary listed"
+  ],
+  "sponsorship": "Not mentioned"
+}

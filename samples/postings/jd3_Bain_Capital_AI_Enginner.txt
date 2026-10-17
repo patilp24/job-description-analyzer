@@ -1,0 +1,65 @@
+About the job
+Title: AI Engineer
+
+Reports to: Manager, Data Science & AI
+
+Department: Data Science & AI
+
+Location: Boston, MA
+
+Company Overview
+
+With approximately $185 billion of assets under management, Bain Capital is one of the world’s leading private investment firms. We create lasting impact for our investors, teams, businesses, and the communities in which we live. Over four decades we have strategically grown our platform to focus on Private Equity, Growth & Venture, Capital Solutions, Credit & Capital Markets, and Real Assets. Today, our team includes 1,880+ employees in 24 offices on four continents.
+
+We partner differently to help people and companies embrace possibility and realize potential.
+
+Founded as a private partnership in 1984, we have fostered a culture of innovation, entrepreneurialism, and agility, empowering our people to define and own their career trajectories. Today, our partnership approach enables us to pursue strategic growth, build enduring relationships with a robust external network, and collaborate across our integrated platform to connect the deep and diverse expertise that unlocks breakthrough insights.
+
+Our people are the heart of our advantage.
+
+Colleagues at all levels have a seat at the table as they tackle business challenges with a principal investor mindset. By asking incisive questions, respectfully challenging one another, and remaining intellectually agile, we work together to achieve exceptional outcomes.
+
+Description
+
+We are seeking an AI Engineer to join our Data Science & AI team. You will develop and deploy AI solutions across Bain Capital, working closely with Investment teams to build capabilities that enhance decision-making, streamline processes, and deliver measurable value throughout the firm.
+
+You will leverage your deep expertise in AI, data science, and software engineering to implement AI solutions at scale. The work spans end-to-end—from understanding user needs, data gathering, and prompt engineering to building agentic systems and performance optimization in production environments. You will also champion AI best practices across the organization, collaborating with colleagues to shape the roadmap for AI-based products and capabilities.
+
+A successful candidate will excel at working closely with business stakeholders while implementing production-ready AI systems. You should possess a strong analytical mindset and thrive in a fast-paced, dynamic environment. You will demonstrate high standards for both speed and quality, bring a creative approach to problem-solving, and embody an entrepreneurial spirit that aligns with our culture of innovation.
+
+Key Responsibilities
+
+AI Development & Deployment: Design, build, fine-tune, and deploy AI models and agentic applications tailored to a variety of business use cases.
+Collaboration & Stakeholder Management: Work with business users to gather requirements, communicate technical approaches, and deliver actionable insights.
+Evaluation & Optimization: Implement best practices for performance evaluation of AI applications, including accuracy, latency, scalability, and cost optimization.
+Data Pipeline & Preprocessing: Establish robust data processing pipelines, ensuring high-quality labeled datasets for training and inference.
+R&D & Thought Leadership: Stay informed about the latest research and innovations in AI; drive continuous improvement by exploring emerging methods, tools, and frameworks.
+Mentorship & Knowledge Sharing: Provide guidance to junior engineers and data scientists and lead internal training sessions on AI best practices.
+
+Technology Experience
+
+Required:
+
+AI Engineering: Advanced proficiency in Python for both backend engineering of web applications and AI/ML model development.
+Agentic AI Systems: Experience deploying AI agents capable of planning, reasoning, and executing complex tasks with minimal human intervention.
+RAG: Experience integrating advanced search/vector databases (e.g., Pinecone) to enhance AI performance.
+Cloud & DevOps: Experience with AWS (e.g. EC2, EKS, S3, Lambda), containerization (e.g. Docker, Kubernetes), and infrastructure-as-code (e.g. Terraform).
+Data Engineering: Strong understanding of data workflows and distributed computing frameworks for large-scale data ingestion, preprocessing, and feature engineering.
+
+Nice to Have:
+
+MLOps Tools: Familiarity with CI/CD pipelines for machine learning, experiment tracking (e.g., MLflow, Weights & Biases), and model deployment.
+Traditional ML Models: Experience deploying and optimizing traditional machine learning models (e.g., XGBoost, Scikit-Learn).
+Frontend Skills: Working knowledge of React or similar frameworks to build user-facing AI-driven applications.
+
+Qualifications
+
+Education: BS or MS in Computer Science, Data Science, Machine Learning, or a related technical field.
+Professional Experience: Several years of hands-on experience building and deploying machine learning or NLP solutions in a production environment.
+Problem-Solving & Analysis: Demonstrated ability to create business value by applying machine learning algorithms and methods to complex, real-world scenarios.
+Self-Starter: Ability to operate independently in a dynamic environment; comfortable taking ownership and driving projects to completion.
+Adaptability: Comfortable with rapid iteration, pivoting strategies, and learning new technologies as needed.
+Communication Skills: Strong verbal and written communication skills to effectively collaborate with technical and non-technical stakeholders.
+Leadership & Teamwork: Proven ability to mentor junior team members, lead complex initiatives, and foster collaboration.
+
+

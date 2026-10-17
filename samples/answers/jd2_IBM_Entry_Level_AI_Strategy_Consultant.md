@@ -1,0 +1,7 @@
+- Title: AI-First Transformation Strategy Consultant (IBM)
+- Seniority: Entry-level (no years of experience stated)
+- Salary: Not stated
+- Must-have: none explicitly listed (the "Required Technical and Professional Expertise" section only describes a high-performing candidate drawn to the intersection of AI, strategy, product, and enterprise transformation)
+- Preferred: Master's degree, experience in strategy/transformation/operations, technology/product development/analytics, finance/value creation/operating model design, AI/automation/workflow modernization, thrives in ambiguity and designs from first principles, structured executive-level communication, understanding of how systems/people/technology interact, high ownership and intellectual curiosity
+- Red flags: no salary listed, Master's degree preferred for an entry-level role, no concrete minimum qualifications, posting text is cut off mid-sentence
+- Sponsorship: Info given: No
