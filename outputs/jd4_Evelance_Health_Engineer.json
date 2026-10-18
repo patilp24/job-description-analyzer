@@ -8,23 +8,20 @@
   "education_required": "BA/BS degree in Information Technology, Computer Science or related field",
   "education_preferred": null,
   "required_qualifications": [
-    "5 years related experience",
-    "Multi dimensional platform experience",
-    "Business and technical applications experience"
+    "Application and system development",
+    "Multi-dimensional platform experience",
+    "Business and technical applications"
   ],
   "preferred_qualifications": [
     "AI engineering and Generative AI",
     "LLM applications and automation",
     "Applied machine learning",
-    "AI-enabled applications integration",
-    "Prompt engineering and RAG",
     "Cloud platforms and APIs",
-    "Multi-database and multi-language",
-    "Mentoring and project leadership"
+    "Multi-database and multi-language experience"
   ],
   "red_flags": [
     "Salary missing or no upper range",
-    "Key details missing (company, location)"
+    "Key details missing (company)"
   ],
   "sponsorship": "Not mentioned"
 }

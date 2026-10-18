@@ -8,19 +8,20 @@
   "education_required": "Bachelor's degree",
   "education_preferred": null,
   "required_qualifications": [
-    "Management consulting or business strategy",
-    "Investment banking or private equity",
-    "Client and executive partnership",
+    "Management consulting or business strategy experience",
+    "Investment banking, venture capital, or private equity",
+    "Client or partner engagement",
     "Business strategy development",
-    "Cross-functional initiatives execution"
+    "Cross-functional initiative execution"
   ],
   "preferred_qualifications": [
-    "Quantitative analysis and problem-solving",
-    "SQL and statistical analysis",
-    "Predictive modeling and spreadsheet software",
-    "Marketing capabilities impact",
-    "Cross-team relationship building",
-    "Ambiguity tolerance in fast-changing environment",
+    "Quantitative analysis and business judgment",
+    "SQL and analytical tools",
+    "Statistical analysis and predictive modeling",
+    "Spreadsheet software",
+    "Marketing capabilities familiarity",
+    "Stakeholder influence and relationship building",
+    "Tolerance for ambiguity",
     "Market and product nuances understanding"
   ],
   "red_flags": [],

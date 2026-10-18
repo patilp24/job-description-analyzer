@@ -1,100 +1,72 @@
+import json
 import time
 from pathlib import Path
 
 from dotenv import load_dotenv
 from google import genai
+from pydantic import ValidationError
+
+from prompts import PROMPT_TEMPLATE
+from schemas import JobExtraction
 
 load_dotenv()
 client = genai.Client()
 
 MODEL = "gemini-3.5-flash-lite"
+MAX_ATTEMPTS = 3
 POSTINGS_DIR = Path("samples/postings")
 OUTPUT_DIR = Path("outputs")
-OUTPUT_DIR.mkdir(exist_ok=True)
 
-PROMPT_TEMPLATE = """Extract structured data from the job posting below and return it as a single JSON object.
-Accuracy to the source text is the top priority: use ONLY information explicitly stated in the
-posting, and never guess or invent. If a field is not mentioned, use null for single values
-and [] for lists.
 
-<posting>
-{posting}
-</posting>
+def clean_json_text(text: str) -> str:
+    """Remove ```json ... ``` fences if the model added them."""
+    text = text.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1]    # drop the first line (```json)
+        text = text.rsplit("```", 1)[0]  # drop the closing ```
+    return text.strip()
 
-## Extraction rules
 
-**Qualifications**
-- Write each item as a short keyword phrase of 2-6 words, like a line on a resume skills list.
-  Good: "Python", "2+ years SQL", "AWS (EC2, S3, Lambda)", "Stakeholder communication".
-  Bad: full sentences, copied paragraphs, or labels like "AI Engineering: ...".
-- Split combined requirements into separate items. Skip pure filler such as
-  "high-performing" or "passionate".
-- Limit each list to a maximum of 8 items, most important first.
-- required_qualifications: items the posting marks as required or minimum.
-- preferred_qualifications: items marked preferred or nice-to-have.
-- If the posting has no clear required section, put those items under preferred.
-- Each item appears in only ONE list.
+def extract_job(posting_text: str) -> JobExtraction:
+    """Send a posting to Gemini, validate the result, retry if invalid."""
+    base_prompt = PROMPT_TEMPLATE.format(posting=posting_text)
+    prompt = base_prompt
 
-**Education**
-- Put ALL degree requirements in the education fields, never in the qualification lists.
-- education_required: the minimum degree stated, as a short phrase (e.g., "Bachelor's in CS or related").
-- education_preferred: any preferred/advanced degree (e.g., "Master's degree").
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        interaction = client.interactions.create(model=MODEL, input=prompt)
+        raw = interaction.output_text
 
-**Seniority** (exactly one of: "Entry" (0-1 yrs), "Early-career" (1-3 yrs), "Mid" (3-5 yrs),
-"Senior" (5+ yrs), "Unclear")
-- Use stated years of experience first. "Several years" = "Mid".
-- If no years are stated: "Senior", "Staff", "Lead", or "Principal" in the title = "Senior";
-  "Associate", "Junior", "Entry", "Graduate", or "New grad" in the title or text =
-  "Entry" or "Early-career".
-- If there is no evidence either way, use "Unclear". Never default to "Mid".
+        try:
+            data = json.loads(clean_json_text(raw))
+            return JobExtraction.model_validate(data)
+        except (json.JSONDecodeError, ValidationError) as error:
+            print(f"  attempt {attempt} invalid: {error}")
+            # Tell the model exactly what was wrong, then try again
+            prompt = (
+                base_prompt
+                + "\n\nYour previous answer was invalid for this reason:\n"
+                + str(error)
+                + "\nReturn the corrected JSON object only."
+            )
+            time.sleep(5)
 
-**Work model** (exactly one of: "Remote", "Hybrid", "On-site", or null)
-- Use null unless the posting explicitly states it.
+    raise ValueError(f"No valid result after {MAX_ATTEMPTS} attempts")
 
-**Sponsorship** (exactly one of: "Offered", "Not offered", "Not mentioned")
 
-**Red flags**
-- Check the posting against each of these, and add a short flag (under 15 words) naming the
-  specific evidence for every one that applies:
-  - Salary missing or no upper range
-  - Experience required doesn't match the level
-  - Unusually broad required tech stack
-  - Vague or filler requirements
-  - Key details missing (company, location, duties)
-- Hybrid or on-site work is NOT a red flag.
-- Return [] only if none apply.
+if __name__ == "__main__":
+    OUTPUT_DIR.mkdir(exist_ok=True)
 
-## Output
-Return only the JSON object, with no commentary and no code fences, using exactly these keys:
-{{
-  "job_title": string,
-  "company": string or null,
-  "seniority": string,
-  "years_experience_required": string or null,
-  "salary": string or null,
-  "work_model": string or null,
-  "education_required": string or null,
-  "education_preferred": string or null,
-  "required_qualifications": [string],
-  "preferred_qualifications": [string],
-  "red_flags": [string],
-  "sponsorship": string
-}}
-"""
+    for posting_file in sorted(POSTINGS_DIR.glob("*.txt")):
+        print(f"Analyzing {posting_file.name} ...")
+        try:
+            job = extract_job(posting_file.read_text(encoding="utf-8"))
+        except ValueError as error:
+            print(f"  FAILED: {error}")
+            continue
 
-for posting_file in sorted(POSTINGS_DIR.glob("*.txt")):
-    posting_text = posting_file.read_text(encoding="utf-8")
-    prompt = PROMPT_TEMPLATE.format(posting=posting_text)
+        output_file = OUTPUT_DIR / f"{posting_file.stem}.json"
+        output_file.write_text(job.model_dump_json(indent=2), encoding="utf-8")
+        print(f"  valid ✓ saved to {output_file}")
+        time.sleep(5)
 
-    print(f"Analyzing {posting_file.name} ...")
-    interaction = client.interactions.create(model=MODEL, input=prompt)
-    result = interaction.output_text
-
-    # Save each result so you can compare it with your answer key
-    output_file = OUTPUT_DIR / f"{posting_file.stem}.json"
-    output_file.write_text(result, encoding="utf-8")
-    print(f"  saved to {output_file}")
-
-    time.sleep(5)  # stay well under the free tier's 15 requests/minute
-
-print("Done.")
+    print("Done.")

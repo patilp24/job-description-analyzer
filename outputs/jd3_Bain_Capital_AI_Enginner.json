@@ -10,15 +10,14 @@
   "required_qualifications": [
     "Python proficiency",
     "Agentic AI Systems",
-    "RAG and vector databases",
-    "AWS and DevOps tools",
-    "Data engineering and workflows",
-    "Machine learning production experience"
+    "RAG & vector databases",
+    "AWS & DevOps",
+    "Data Engineering & workflows"
   ],
   "preferred_qualifications": [
     "MLOps Tools",
     "Traditional ML Models",
-    "Frontend Skills"
+    "Frontend Skills (React)"
   ],
   "red_flags": [
     "Salary missing or no upper range"
