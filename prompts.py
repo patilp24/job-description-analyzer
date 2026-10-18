@@ -67,3 +67,55 @@ Return only the JSON object, with no commentary and no code fences, using exactl
   "sponsorship": string
 }}
 """
+
+
+MATCH_PROMPT_TEMPLATE = """Compare a candidate's resume against a job's qualifications.
+Be strict and honest: this helps the candidate decide where to apply and what to learn.
+
+<required_qualifications>
+{required}
+</required_qualifications>
+
+<preferred_qualifications>
+{preferred}
+</preferred_qualifications>
+
+<education_required>
+{education}
+</education_required>
+
+<resume>
+{resume}
+</resume>
+
+## Rules
+- Evaluate EVERY qualification listed above, in the same order, copying its text exactly
+  into "qualification". Do not add, merge, or skip any.
+- status:
+  - "Met": the resume clearly shows it (skills, coursework, projects, or work experience).
+  - "Partial": related or weaker evidence (e.g., a similar tool, fewer years, coursework only).
+  - "Missing": no evidence in the resume.
+- Use ONLY what the resume states. Never assume a skill from a job title or degree alone.
+- evidence: a short quote or reference from the resume (under 15 words) supporting
+  Met or Partial; null if Missing.
+- education_status: "Met", "Not met", "Not required" (if no education is listed above),
+  or "Unclear".
+- summary: 2 sentences: the candidate's strongest fit and the most important gap.
+- Years of experience: count ONLY from dates in the resume's work history
+  (internships count at their actual length; education does not count).
+  If the total is below the requirement, use "Partial" if it is at least half,
+  otherwise "Missing". Show the calculation in evidence (e.g., "~2.5 yrs total").
+  - candidate_years_experience: total years of professional work from the dated roles
+  in the resume (internships at their actual length, education excluded), as a number
+  rounded to one decimal (e.g., 3.5).
+
+## Output
+Return only the JSON object, with no commentary and no code fences, using exactly these keys:
+{{
+  "required": [{{"qualification": string, "status": string, "evidence": string or null}}],
+  "preferred": [{{"qualification": string, "status": string, "evidence": string or null}}],
+  "education_status": string,
+  "candidate_years_experience": number,
+  "summary": string
+}}
+"""

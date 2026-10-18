@@ -7,3 +7,6 @@ venv/
 # Python cache files
 __pycache__/
 *.pyc
+
+samples/my_resume.txt
+outputs/matches/
