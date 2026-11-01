@@ -19,6 +19,26 @@ PREFERRED_WEIGHT = 0.3
 def format_list(items: list[str]) -> str:
     return "\n".join(f"- {item}" for item in items) if items else "(none listed)"
 
+def normalize(text: str) -> str:
+    """Keep only lowercase letters and digits, so spacing/punctuation differences don't matter."""
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
+def verify_evidence(result: MatchResult, resume_text: str) -> int:
+    """Check each evidence quote really appears in the resume. Returns how many failed."""
+    resume_normalized = normalize(resume_text)
+    unverified = 0
+
+    for m in result.required + result.preferred:
+        if m.status == "Missing" or not m.evidence:
+            continue
+        if normalize(m.evidence) not in resume_normalized:
+            unverified += 1
+            m.evidence = f"{m.evidence} (unverified)"
+            if m.status == "Met":
+                m.status = "Partial"
+
+    return unverified
 
 def required_years(job: JobExtraction) -> float | None:
     """Pull the number from e.g. '5 years' or '2+ years'. None if there is no number."""
@@ -62,6 +82,9 @@ def match_resume(job: JobExtraction, resume_text: str) -> MatchResult:
             or len(result.preferred) != len(job.preferred_qualifications)):
         print("  warning: model skipped or added qualifications")
         
+    unverified = verify_evidence(result, resume_text)
+    if unverified:
+        print(f"  {unverified} evidence quote(s) could not be verified")
     apply_years_check(job, result)
     return result
 

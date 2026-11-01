@@ -98,15 +98,16 @@ Be strict and honest: this helps the candidate decide where to apply and what to
   - "Partial": related or weaker evidence (e.g., a similar tool, fewer years, coursework only).
   - "Missing": no evidence in the resume.
 - Use ONLY what the resume states. Never assume a skill from a job title or degree alone.
-- evidence: a short quote or reference from the resume (under 15 words) supporting
-  Met or Partial; null if Missing.
+- evidence: for Met or Partial, copy ONE continuous excerpt from the resume WORD FOR WORD
+  (3-15 words). Do not paraphrase, change tense, add words, or use "...".
+  null if Missing.
 - education_status: "Met", "Not met", "Not required" (if no education is listed above),
   or "Unclear".
 - summary: 2 sentences: the candidate's strongest fit and the most important gap.
 - Years of experience: count ONLY from dates in the resume's work history
   (internships count at their actual length; education does not count).
   If the total is below the requirement, use "Partial" if it is at least half,
-  otherwise "Missing". Show the calculation in evidence (e.g., "~2.5 yrs total").
+  otherwise "Missing".
   - candidate_years_experience: total years of professional work from the dated roles
   in the resume (internships at their actual length, education excluded), as a number
   rounded to one decimal (e.g., 3.5).

@@ -29,11 +29,14 @@ def format_job(job: JobExtraction) -> str:
 {bullet_list(job.red_flags)}
 """
 
+def table_cell(text: str) -> str:
+    """Make text safe for one Markdown table cell (no column separators or line breaks)."""
+    return text.replace("|", "/").replace("\n", " ").strip()
 
 def format_match(job: JobExtraction, result: MatchResult) -> str:
     rows = "\n".join(
-        f"| {STATUS_ICON[m.status]} {m.status} | {m.qualification} | "
-        f"{(m.evidence or '—').replace('|', '/')} |"
+        f"| {STATUS_ICON[m.status]} {m.status} | {table_cell(m.qualification)} | "
+        f"{table_cell(m.evidence or '—')} |"
         for m in result.required + result.preferred
     )
     return f"""## Match score: {compute_score(result)}/100
