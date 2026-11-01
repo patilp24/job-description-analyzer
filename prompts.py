@@ -13,8 +13,10 @@ and [] for lists.
 - Write each item as a short keyword phrase of 2-6 words, like a line on a resume skills list.
   Good: "Python", "2+ years SQL", "AWS (EC2, S3, Lambda)", "Stakeholder communication".
   Bad: full sentences, copied paragraphs, or labels like "AI Engineering: ...".
-- Split combined requirements into separate items. Skip pure filler such as
-  "high-performing" or "passionate".
+- Split requirements joined by "and" into separate items. But keep "or" alternatives
+  as ONE item (e.g., "2 yrs consulting, strategy, IB, VC, or PE"), because any one
+  of them satisfies the requirement. Never list the same requirement twice.
+  Skip pure filler such as "high-performing" or "passionate".
 - Limit each list to a maximum of 8 items, most important first.
 - required_qualifications: items the posting marks as required or minimum.
 - preferred_qualifications: items marked preferred or nice-to-have.
