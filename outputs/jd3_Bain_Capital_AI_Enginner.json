@@ -2,28 +2,42 @@
   "job_title": "AI Engineer",
   "company": "Bain Capital",
   "seniority": "Mid",
-  "years_experience_required": "Several years",
+  "years_experience_required": null,
   "salary": null,
   "work_model": null,
-  "education_required": "BS or MS in Computer Science, Data Science, Machine Learning, or related technical field",
+  "education_required": "BS or MS in Computer Science, Data Science, Machine Learning, or a related technical field",
   "education_preferred": null,
   "required_qualifications": [
-    "Python",
-    "Agentic AI Systems",
-    "RAG (Pinecone or similar vector databases)",
-    "AWS (EC2, EKS, S3, Lambda)",
-    "Containerization (Docker, Kubernetes)",
-    "Infrastructure-as-code (Terraform)",
-    "Distributed computing frameworks"
+    "Advanced proficiency in Python",
+    "Experience deploying AI agents",
+    "Experience integrating advanced search or vector databases",
+    "Experience with AWS, containerization, and infrastructure-as-code",
+    "Understanding of data workflows and distributed computing frameworks"
   ],
   "preferred_qualifications": [
-    "MLOps tools (CI/CD, MLflow, Weights & Biases)",
-    "Traditional ML models (XGBoost, Scikit-Learn)",
-    "React or similar frontend frameworks"
+    "Familiarity with CI/CD pipelines for machine learning",
+    "Experience deploying and optimizing traditional machine learning models",
+    "Working knowledge of React or similar frameworks"
   ],
   "red_flags": [
-    "Salary missing or no upper range",
-    "Unusually broad required tech stack"
+    "Salary missing or no upper range"
   ],
-  "sponsorship": "Not mentioned"
+  "sponsorship": "Not mentioned",
+  "keywords": [
+    "Python",
+    "AWS",
+    "EC2",
+    "EKS",
+    "S3",
+    "Lambda",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "Pinecone",
+    "XGBoost",
+    "Scikit-Learn",
+    "React",
+    "MLflow",
+    "Weights & Biases"
+  ]
 }

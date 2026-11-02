@@ -4,18 +4,38 @@
   "seniority": "Unclear",
   "years_experience_required": null,
   "salary": null,
-  "work_model": "On-site",
+  "work_model": null,
   "education_required": null,
   "education_preferred": "Master's Degree",
   "required_qualifications": [],
   "preferred_qualifications": [
-    "Strategy, transformation, or operations experience",
-    "Technology, product development, or analytics experience",
-    "Finance, value creation, or operating model design experience",
-    "AI, automation, or workflow modernization experience"
+    "Strategy, transformation, or operations",
+    "Technology, product development, or analytics",
+    "Finance, value creation, or operating model design",
+    "AI, automation, or workflow modernization"
   ],
   "red_flags": [
-    "Salary missing or no upper range"
+    "Salary missing or no upper range",
+    "Experience required doesn't match the level",
+    "Vague or filler requirements"
   ],
-  "sponsorship": "Not mentioned"
+  "sponsorship": "Not mentioned",
+  "keywords": [
+    "AI",
+    "GenAI",
+    "agentic systems",
+    "automation",
+    "workflow redesign",
+    "operating model",
+    "product thinking",
+    "Value creation",
+    "Technology roadmap",
+    "experimentation strategy",
+    "data",
+    "infrastructure",
+    "platform capabilities",
+    "analytics",
+    "Finance",
+    "Operations"
+  ]
 }

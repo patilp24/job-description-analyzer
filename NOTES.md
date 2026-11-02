@@ -16,6 +16,8 @@
   skill-specific years (e.g., "2+ years SQL") are judged by the model
   - Extraction varies between runs (Google posting: company "Google" in earlier runs, "Not named" in this run)
   - "Or" rule isn't followed every run (Google: strategy OR cross-functional split again)
+  - Qualifications got wordier after raising the limit to 10 words (trade-off for keeping named skills)
+- Status column wraps awkwardly ("Missin g") in narrow layouts
 
 ## Ideas
 - Extract resume roles with dates once, and calculate total experience in code

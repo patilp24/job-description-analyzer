@@ -19,6 +19,7 @@ class JobExtraction(BaseModel):
     preferred_qualifications: list[str] = Field(max_length=8)
     red_flags: list[str]
     sponsorship: Literal["Offered", "Not offered", "Not mentioned"]
+    keywords: list[str] = Field(max_length=30)
 
 class QualificationMatch(BaseModel):
     """How the resume matches one qualification."""
@@ -27,6 +28,7 @@ class QualificationMatch(BaseModel):
     qualification: str
     status: Literal["Met", "Partial", "Missing"]
     evidence: str | None
+    general_experience: bool
 
 
 class MatchResult(BaseModel):

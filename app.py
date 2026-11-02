@@ -1,7 +1,8 @@
 import gradio as gr
 
 from extract import extract_job
-from match import match_resume, compute_score, missing_skills, confidence, count_met
+from match import (match_resume, compute_score, missing_skills, confidence,
+                   count_met, keyword_coverage)
 from schemas import JobExtraction, MatchResult
 
 STATUS_ICON = {"Met": "✅", "Partial": "🟡", "Missing": "❌"}
@@ -22,6 +23,9 @@ def format_job(job: JobExtraction) -> str:
 ### Required
 {bullet_list(job.required_qualifications)}
 
+### 🔑 Exact keywords from the posting
+{" · ".join(f"`{k}`" for k in job.keywords) or "_None found_"}
+
 ### Preferred
 {bullet_list(job.preferred_qualifications)}
 
@@ -33,7 +37,8 @@ def table_cell(text: str) -> str:
     """Make text safe for one Markdown table cell (no column separators or line breaks)."""
     return text.replace("|", "/").replace("\n", " ").strip()
 
-def format_match(job: JobExtraction, result: MatchResult) -> str:
+def format_match(job: JobExtraction, result: MatchResult, resume_text: str) -> str:
+    present, missing_keywords = keyword_coverage(job, resume_text)
     rows = "\n".join(
         f"| {STATUS_ICON[m.status]} {m.status} | {table_cell(m.qualification)} | "
         f"{table_cell(m.evidence or '—')} |"
@@ -48,6 +53,10 @@ def format_match(job: JobExtraction, result: MatchResult) -> str:
 
 ### Missing skills
 {bullet_list(missing_skills(result))}
+
+### 🔑 Keywords on your resume: {len(present)}/{len(job.keywords)}
+**Missing (exact wording from the posting):**  
+{" · ".join(f"`{k}`" for k in missing_keywords) or "_None — every keyword appears on your resume_"}
 
 ### Details
 | Status | Qualification | Evidence from your resume |
@@ -73,7 +82,7 @@ def analyze(posting_text: str, resume_text: str):
     except ValueError:
         raise gr.Error("Couldn't compare with your resume. Please try again.")
 
-    return format_job(job), format_match(job, result), job.model_dump()
+    return format_job(job), format_match(job, result, resume_text), job.model_dump()
 
 
 with gr.Blocks(title="Job Description Analyzer") as demo:

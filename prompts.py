@@ -22,6 +22,13 @@ posting, and never guess or invent. If a field is not mentioned, use null for si
 - If the posting has no clear required section, put those items under preferred.
 - Each item appears in only ONE list.
 
+**Keywords**
+- keywords: the specific skills, tools, technologies, methods, certifications, and domain
+  terms an applicant tracking system would scan for, copied EXACTLY as written in the
+  posting (same spelling, capitalization, and wording). One term per item
+  (e.g., "SQL", "predictive modeling", "spreadsheet software").
+  Do not paraphrase, abbreviate, expand, or invent terms. Maximum 25, most important first.
+
 **Education**
 - Put ALL degree requirements in the education fields, never in the qualification lists.
 - education_required: the minimum degree stated, as a short phrase (e.g., "Bachelor's in CS or related").
@@ -64,6 +71,7 @@ Return only the JSON object, with no commentary and no code fences, using exactl
   "education_preferred": string or null,
   "required_qualifications": [string],
   "preferred_qualifications": [string],
+  "keywords": [string],
   "red_flags": [string],
   "sponsorship": string
 }}
@@ -103,13 +111,17 @@ Be strict and honest: this helps the candidate decide where to apply and what to
 - summary: 2 sentences: the candidate's strongest fit and the most important gap.
 - The candidate has {years} years of total professional experience (already calculated
   from their dated roles). Use this number for experience requirements; do not recalculate.
+- general_experience: true ONLY if the qualification is about total years of professional
+  experience in general (e.g., "5 years related experience", "3+ years of work experience").
+  false if it names a specific field, role type, or skill
+  (e.g., "2 years in consulting or banking", "2+ years SQL").
 
 
 ## Output
 Return only the JSON object, with no commentary and no code fences, using exactly these keys:
 {{
-  "required": [{{"qualification": string, "status": string, "evidence": string or null}}],
-  "preferred": [{{"qualification": string, "status": string, "evidence": string or null}}],
+  "required": [{{"qualification": string, "status": string, "evidence": string or null, "general_experience": boolean}}],
+  "preferred": [{{"qualification": string, "status": string, "evidence": string or null, "general_experience": boolean}}],
   "education_status": string,
   "summary": string
 }}

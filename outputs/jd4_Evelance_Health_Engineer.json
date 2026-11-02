@@ -14,8 +14,8 @@
   ],
   "preferred_qualifications": [
     "AI engineering, Generative AI, LLM applications, automation, and applied machine learning",
-    "AI-enabled applications, including chatbots, copilots, intelligent search, document processing, recommendation systems, workflow automation, or decision-support solutions",
-    "LLM concepts such as prompt engineering, retrieval-augmented generation, embeddings, vector databases, model evaluation, responsible AI, guardrails, and production monitoring",
+    "Designing, building, or integrating AI-enabled applications",
+    "Familiarity with LLM concepts",
     "Modern software engineering practices, APIs, cloud platforms, data pipelines, and scalable application architecture",
     "Evaluating or integrating AI platforms, Gen AI tools, automation technologies, or cloud-based AI services",
     "Multi-database and/or multi-language experience",
@@ -25,5 +25,26 @@
     "Salary missing or no upper range",
     "Key details missing (company, location)"
   ],
-  "sponsorship": "Not mentioned"
+  "sponsorship": "Not mentioned",
+  "keywords": [
+    "Generative AI",
+    "LLM",
+    "AI engineering",
+    "machine learning",
+    "intelligent automation",
+    "chatbots",
+    "copilots",
+    "document processing",
+    "workflow automation",
+    "prompt engineering",
+    "retrieval-augmented generation",
+    "embeddings",
+    "vector databases",
+    "responsible AI",
+    "guardrails",
+    "APIs",
+    "cloud platforms",
+    "data pipelines",
+    "scalable application architecture"
+  ]
 }

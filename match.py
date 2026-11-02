@@ -1,5 +1,6 @@
 from datetime import date
 from functools import lru_cache
+from extract import find_exact
 
 import time
 from pathlib import Path
@@ -98,8 +99,7 @@ def apply_years_check(job: JobExtraction, result: MatchResult) -> None:
         status = "Missing"
 
     for m in result.required + result.preferred:
-        text = m.qualification.lower()
-        if "year" in text and "experience" in text:
+        if m.general_experience:
             m.status = status
             m.evidence = f"~{have:.1f} yrs vs {needed:g} required (calculated)"
 
@@ -154,6 +154,12 @@ def missing_skills(result: MatchResult) -> list[str]:
     return [m.qualification for m in result.required + result.preferred
             if m.status == "Missing"]
 
+def keyword_coverage(job: JobExtraction, resume_text: str) -> tuple[list[str], list[str]]:
+    """Split the posting's keywords into those found exactly in the resume and those missing."""
+    present, missing = [], []
+    for keyword in job.keywords:
+        (present if find_exact(keyword, resume_text) else missing).append(keyword)
+    return present, missing
 
 def confidence(job: JobExtraction) -> str:
     """Low confidence when the posting gives too little to measure against."""

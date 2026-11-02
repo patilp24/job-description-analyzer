@@ -8,18 +8,34 @@
   "education_required": "Bachelor's degree or equivalent practical experience",
   "education_preferred": null,
   "required_qualifications": [
-    "2 years experience in management consulting, business strategy, investment banking, venture capital, or private equity",
+    "2 years of management consulting, business strategy, investment banking, venture capital, or private equity experience",
     "Experience working with clients, executives, or other partners",
-    "Experience developing business strategies or executing cross-functional initiatives"
+    "Experience developing business strategies",
+    "Experience executing cross-functional initiatives"
   ],
   "preferred_qualifications": [
-    "Business judgment, rigorous problem-solving, and quantitative analysis",
-    "SQL, statistical analysis, predictive modeling, or spreadsheet software",
-    "Familiarity with marketing capabilities",
-    "Ability to work across teams and influence senior managers",
-    "Tolerance for ambiguity in a fast-changing environment",
-    "Understanding of market, product, organizational and cross-functional nuances"
+    "Experience requiring distinctive business judgment and rigorous problem-solving",
+    "Quantitative analysis and communicating findings to senior management",
+    "SQL, statistical analysis, predictive modeling, spreadsheet software",
+    "Familiarity with how marketing capabilities come together",
+    "Ability to work across teams and build relationships",
+    "Influence senior managers",
+    "Tolerance for ambiguity",
+    "Foundational understanding of market, product, and organizational nuances"
   ],
   "red_flags": [],
-  "sponsorship": "Not mentioned"
+  "sponsorship": "Not mentioned",
+  "keywords": [
+    "SQL",
+    "statistical analysis",
+    "predictive modeling",
+    "spreadsheet software",
+    "market research",
+    "business strategy",
+    "management consulting",
+    "investment banking",
+    "venture capital",
+    "private equity",
+    "quantitative analysis"
+  ]
 }

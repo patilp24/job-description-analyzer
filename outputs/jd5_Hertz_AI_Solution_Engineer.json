@@ -3,7 +3,7 @@
   "company": "Hertz",
   "seniority": "Early-career",
   "years_experience_required": "2+ years",
-  "salary": "$90k+",
+  "salary": "Starts at $90k depending on experience",
   "work_model": null,
   "education_required": "Bachelors in a technical field",
   "education_preferred": null,
@@ -12,16 +12,24 @@
     "SQL",
     "Databricks",
     "AI",
-    "Production deployment"
+    "Bachelors in a technical field"
   ],
   "preferred_qualifications": [
+    "Databricks",
     "Spark",
-    "Cloud",
+    "cloud",
     "AI coding tools"
   ],
   "red_flags": [
-    "Salary missing upper range",
-    "Key details missing: location"
+    "Salary missing or no upper range"
   ],
-  "sponsorship": "Not mentioned"
+  "sponsorship": "Not mentioned",
+  "keywords": [
+    "Python",
+    "SQL",
+    "Databricks",
+    "AI",
+    "Spark",
+    "cloud"
+  ]
 }
