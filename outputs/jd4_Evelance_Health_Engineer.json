@@ -8,20 +8,22 @@
   "education_required": "BA/BS degree in Information Technology, Computer Science or related field",
   "education_preferred": null,
   "required_qualifications": [
-    "Application and system development",
-    "Multi-dimensional platform experience",
-    "Business and technical applications"
+    "5 years related experience",
+    "Multi dimensional platform experience",
+    "Expert level experience with business and technical applications"
   ],
   "preferred_qualifications": [
-    "AI engineering and Generative AI",
-    "LLM applications and automation",
-    "Applied machine learning",
-    "Cloud platforms and APIs",
-    "Multi-database and multi-language experience"
+    "AI engineering, Generative AI, LLM applications, automation, and applied machine learning",
+    "AI-enabled applications, including chatbots, copilots, intelligent search, document processing, recommendation systems, workflow automation, or decision-support solutions",
+    "LLM concepts such as prompt engineering, retrieval-augmented generation, embeddings, vector databases, model evaluation, responsible AI, guardrails, and production monitoring",
+    "Modern software engineering practices, APIs, cloud platforms, data pipelines, and scalable application architecture",
+    "Evaluating or integrating AI platforms, Gen AI tools, automation technologies, or cloud-based AI services",
+    "Multi-database and/or multi-language experience",
+    "Experience mentoring others, leading multiple small projects, and providing troubleshooting support"
   ],
   "red_flags": [
     "Salary missing or no upper range",
-    "Key details missing (company)"
+    "Key details missing (company, location)"
   ],
   "sponsorship": "Not mentioned"
 }

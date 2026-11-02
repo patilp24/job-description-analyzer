@@ -5,24 +5,20 @@
   "years_experience_required": "2 years",
   "salary": "$95000 - $136000 (USD) + 15% bonus target + equity + benefits",
   "work_model": null,
-  "education_required": "Bachelor's degree",
+  "education_required": "Bachelor's degree or equivalent practical experience",
   "education_preferred": null,
   "required_qualifications": [
-    "Management consulting or business strategy experience",
-    "Investment banking, venture capital, or private equity",
-    "Client or partner engagement",
-    "Business strategy development",
-    "Cross-functional initiative execution"
+    "2 years experience in management consulting, business strategy, investment banking, venture capital, or private equity",
+    "Experience working with clients, executives, or other partners",
+    "Experience developing business strategies or executing cross-functional initiatives"
   ],
   "preferred_qualifications": [
-    "Quantitative analysis and business judgment",
-    "SQL and analytical tools",
-    "Statistical analysis and predictive modeling",
-    "Spreadsheet software",
-    "Marketing capabilities familiarity",
-    "Stakeholder influence and relationship building",
-    "Tolerance for ambiguity",
-    "Market and product nuances understanding"
+    "Business judgment, rigorous problem-solving, and quantitative analysis",
+    "SQL, statistical analysis, predictive modeling, or spreadsheet software",
+    "Familiarity with marketing capabilities",
+    "Ability to work across teams and influence senior managers",
+    "Tolerance for ambiguity in a fast-changing environment",
+    "Understanding of market, product, organizational and cross-functional nuances"
   ],
   "red_flags": [],
   "sponsorship": "Not mentioned"

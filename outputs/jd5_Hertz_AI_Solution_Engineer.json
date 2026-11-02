@@ -5,26 +5,23 @@
   "years_experience_required": "2+ years",
   "salary": "$90k+",
   "work_model": null,
-  "education_required": "Bachelor's in a technical field",
+  "education_required": "Bachelors in a technical field",
   "education_preferred": null,
   "required_qualifications": [
     "Python",
-    "2+ years SQL",
+    "SQL",
     "Databricks",
-    "AI development",
-    "Data analysis and pattern finding",
-    "Building AI agents and apps",
-    "Automated workflows and pipelines",
-    "Production deployment and impact measurement"
+    "AI",
+    "Production deployment"
   ],
   "preferred_qualifications": [
     "Spark",
-    "Cloud technologies",
+    "Cloud",
     "AI coding tools"
   ],
   "red_flags": [
     "Salary missing upper range",
-    "Vague or filler requirements"
+    "Key details missing: location"
   ],
   "sponsorship": "Not mentioned"
 }

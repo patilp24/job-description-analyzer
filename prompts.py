@@ -1,7 +1,6 @@
 PROMPT_TEMPLATE = """Extract structured data from the job posting below and return it as a single JSON object.
 Accuracy to the source text is the top priority: use ONLY information explicitly stated in the
-posting, and never guess or invent. If a field is not mentioned, use null for single values
-and [] for lists.
+posting, and never guess or invent. If a field is not mentioned, use null for single value and [] for lists.
 
 <posting>
 {posting}
@@ -10,13 +9,13 @@ and [] for lists.
 ## Extraction rules
 
 **Qualifications**
-- Write each item as a short keyword phrase of 2-6 words, like a line on a resume skills list.
-  Good: "Python", "2+ years SQL", "AWS (EC2, S3, Lambda)", "Stakeholder communication".
-  Bad: full sentences, copied paragraphs, or labels like "AI Engineering: ...".
-- Split requirements joined by "and" into separate items. But keep "or" alternatives
-  as ONE item (e.g., "2 yrs consulting, strategy, IB, VC, or PE"), because any one
-  of them satisfies the requirement. Never list the same requirement twice.
-  Skip pure filler such as "high-performing" or "passionate".
+- Write each item as a short phrase (2-10 words), like a line on a resume skills list.
+- ALWAYS keep specific named tools, languages, platforms, and methods (e.g., SQL, Python,
+  AWS, Tableau, predictive modeling). Never replace them with a generic category.
+  Good: "SQL, statistics, predictive modeling, spreadsheets", "AWS (EC2, S3, Lambda)", "Python"
+  Bad: "Analytical tools and techniques", "Cloud experience", full sentences, copied paragraphs, or labels like "AI Engineering: ...".
+- Split requirements joined by "and" into separate items. But keep "or" alternatives as ONE item (e.g., "2 yrs consulting, strategy, IB, VC, or PE"), because any one
+  of them satisfies the requirement. Never list the same requirement twice. Skip pure filler such as "high-performing" or "passionate".
 - Limit each list to a maximum of 8 items, most important first.
 - required_qualifications: items the posting marks as required or minimum.
 - preferred_qualifications: items marked preferred or nice-to-have.
@@ -91,26 +90,20 @@ Be strict and honest: this helps the candidate decide where to apply and what to
 </resume>
 
 ## Rules
-- Evaluate EVERY qualification listed above, in the same order, copying its text exactly
-  into "qualification". Do not add, merge, or skip any.
+- Evaluate EVERY qualification listed above, in the same order, copying its text exactly into "qualification". Do not add, merge, or skip any.
 - status:
   - "Met": the resume clearly shows it (skills, coursework, projects, or work experience).
   - "Partial": related or weaker evidence (e.g., a similar tool, fewer years, coursework only).
   - "Missing": no evidence in the resume.
 - Use ONLY what the resume states. Never assume a skill from a job title or degree alone.
 - evidence: for Met or Partial, copy ONE continuous excerpt from the resume WORD FOR WORD
-  (3-15 words). Do not paraphrase, change tense, add words, or use "...".
+  (3-15 words). Do not paraphrase, change tense, add words, or use "...". 
   null if Missing.
-- education_status: "Met", "Not met", "Not required" (if no education is listed above),
-  or "Unclear".
+- education_status: "Met", "Not met", "Not required" (if no education is listed above), or "Unclear".
 - summary: 2 sentences: the candidate's strongest fit and the most important gap.
-- Years of experience: count ONLY from dates in the resume's work history
-  (internships count at their actual length; education does not count).
-  If the total is below the requirement, use "Partial" if it is at least half,
-  otherwise "Missing".
-  - candidate_years_experience: total years of professional work from the dated roles
-  in the resume (internships at their actual length, education excluded), as a number
-  rounded to one decimal (e.g., 3.5).
+- The candidate has {years} years of total professional experience (already calculated
+  from their dated roles). Use this number for experience requirements; do not recalculate.
+
 
 ## Output
 Return only the JSON object, with no commentary and no code fences, using exactly these keys:
@@ -118,7 +111,26 @@ Return only the JSON object, with no commentary and no code fences, using exactl
   "required": [{{"qualification": string, "status": string, "evidence": string or null}}],
   "preferred": [{{"qualification": string, "status": string, "evidence": string or null}}],
   "education_status": string,
-  "candidate_years_experience": number,
   "summary": string
+}}
+"""
+
+RESUME_ROLES_PROMPT = """List every professional role in the resume below: jobs and internships
+from the work experience section. Do NOT include education or projects.
+
+<resume>
+{resume}
+</resume>
+
+## Rules
+- Copy dates from the resume. Do not calculate anything.
+- start and end must be in YYYY-MM format (e.g., "2020-11").
+- If a role is current ("Present", "Current", "Now"), set end to "Present".
+- If only a year is given, use "-01" for start and "-12" for end.
+
+## Output
+Return only the JSON object, with no commentary and no code fences:
+{{
+  "roles": [{{"title": string, "organization": string, "start": "YYYY-MM", "end": "YYYY-MM" or "Present"}}]
 }}
 """

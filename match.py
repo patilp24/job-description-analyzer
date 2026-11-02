@@ -1,11 +1,15 @@
+from datetime import date
+from functools import lru_cache
+
 import time
 from pathlib import Path
 
 import re
 
 from llm import generate_validated
-from prompts import MATCH_PROMPT_TEMPLATE
-from schemas import JobExtraction, MatchResult
+from prompts import MATCH_PROMPT_TEMPLATE, RESUME_ROLES_PROMPT
+from schemas import JobExtraction, MatchResult, ResumeRoles
+
 
 RESUME_FILE = Path("samples/my_resume.txt")
 OUTPUT_DIR = Path("outputs")
@@ -18,6 +22,38 @@ PREFERRED_WEIGHT = 0.3
 
 def format_list(items: list[str]) -> str:
     return "\n".join(f"- {item}" for item in items) if items else "(none listed)"
+
+def month_number(value: str) -> int:
+    """Turn '2020-11' into a single month count. 'Present' means this month."""
+    if value == "Present":
+        today = date.today()
+        return today.year * 12 + today.month
+    year, month = value.split("-")
+    return int(year) * 12 + int(month)
+
+
+@lru_cache(maxsize=16)
+def get_candidate_years(resume_text: str) -> float:
+    """Ask the model for the dated roles, then calculate total experience in code."""
+    prompt = RESUME_ROLES_PROMPT.format(resume=resume_text)
+    resume = generate_validated(prompt, ResumeRoles)
+
+    # Turn each role into a (start, end) pair of month numbers, oldest first
+    periods = sorted((month_number(r.start), month_number(r.end)) for r in resume.roles)
+
+    # Merge overlapping periods so two jobs at the same time aren't counted twice
+    merged = []
+    for start, end in periods:
+        if merged and start <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], end)
+        else:
+            merged.append([start, end])
+
+    total_months = sum(end - start for start, end in merged)
+    for r in resume.roles:
+        print(f"  role: {r.title} @ {r.organization}: {r.start} to {r.end}")
+    print(f"  total experience: {total_months} months")
+    return round(total_months / 12, 1)
 
 def normalize(text: str) -> str:
     """Keep only lowercase letters and digits, so spacing/punctuation differences don't matter."""
@@ -69,19 +105,22 @@ def apply_years_check(job: JobExtraction, result: MatchResult) -> None:
 
 
 def match_resume(job: JobExtraction, resume_text: str) -> MatchResult:
+    candidate_years = get_candidate_years(resume_text)
+
     prompt = MATCH_PROMPT_TEMPLATE.format(
         required=format_list(job.required_qualifications),
         preferred=format_list(job.preferred_qualifications),
         education=job.education_required or "(none listed)",
+        years=candidate_years,
         resume=resume_text,
     )
     result = generate_validated(prompt, MatchResult)
+    result.candidate_years_experience = candidate_years
 
-    # Sanity check: did the model judge every qualification?
     if (len(result.required) != len(job.required_qualifications)
             or len(result.preferred) != len(job.preferred_qualifications)):
         print("  warning: model skipped or added qualifications")
-        
+
     unverified = verify_evidence(result, resume_text)
     if unverified:
         print(f"  {unverified} evidence quote(s) could not be verified")

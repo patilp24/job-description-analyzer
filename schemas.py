@@ -36,5 +36,22 @@ class MatchResult(BaseModel):
     required: list[QualificationMatch]
     preferred: list[QualificationMatch]
     education_status: Literal["Met", "Not met", "Not required", "Unclear"]
-    candidate_years_experience: float
+    candidate_years_experience: float = 0.0   # filled in by code, not the model
     summary: str
+
+
+class Role(BaseModel):
+    """One job or internship from the resume."""
+    model_config = ConfigDict(extra="forbid")
+
+    title: str
+    organization: str
+    start: str = Field(pattern=r"^\d{4}-\d{2}$")              # e.g. "2020-11"
+    end: str = Field(pattern=r"^(\d{4}-\d{2}|Present)$")      # e.g. "2022-06" or "Present"
+
+
+class ResumeRoles(BaseModel):
+    """All professional roles listed in a resume."""
+    model_config = ConfigDict(extra="forbid")
+
+    roles: list[Role]

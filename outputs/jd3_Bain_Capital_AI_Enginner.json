@@ -5,22 +5,25 @@
   "years_experience_required": "Several years",
   "salary": null,
   "work_model": null,
-  "education_required": "BS or MS in Computer Science, Data Science, Machine Learning, or a related technical field",
+  "education_required": "BS or MS in Computer Science, Data Science, Machine Learning, or related technical field",
   "education_preferred": null,
   "required_qualifications": [
-    "Python proficiency",
+    "Python",
     "Agentic AI Systems",
-    "RAG & vector databases",
-    "AWS & DevOps",
-    "Data Engineering & workflows"
+    "RAG (Pinecone or similar vector databases)",
+    "AWS (EC2, EKS, S3, Lambda)",
+    "Containerization (Docker, Kubernetes)",
+    "Infrastructure-as-code (Terraform)",
+    "Distributed computing frameworks"
   ],
   "preferred_qualifications": [
-    "MLOps Tools",
-    "Traditional ML Models",
-    "Frontend Skills (React)"
+    "MLOps tools (CI/CD, MLflow, Weights & Biases)",
+    "Traditional ML models (XGBoost, Scikit-Learn)",
+    "React or similar frontend frameworks"
   ],
   "red_flags": [
-    "Salary missing or no upper range"
+    "Salary missing or no upper range",
+    "Unusually broad required tech stack"
   ],
   "sponsorship": "Not mentioned"
 }
