@@ -1,4 +1,5 @@
 import gradio as gr
+from llm import LLMError
 
 from extract import extract_job
 from match import (match_resume, compute_score, missing_skills, confidence,
@@ -65,22 +66,27 @@ def format_match(job: JobExtraction, result: MatchResult, resume_text: str) -> s
 """
 
 
+MAX_CHARS = 15000
+
+
 def analyze(posting_text: str, resume_text: str):
-    if not posting_text.strip():
+    posting_text = posting_text.strip()
+    resume_text = resume_text.strip()
+
+    if not posting_text:
         raise gr.Error("Please paste a job description first.")
+    if len(posting_text) < 200:
+        raise gr.Error("That looks too short to be a job posting. Please paste the full description.")
+    if len(posting_text) > MAX_CHARS or len(resume_text) > MAX_CHARS:
+        raise gr.Error(f"Please keep each box under {MAX_CHARS:,} characters.")
 
     try:
         job = extract_job(posting_text)
-    except ValueError:
-        raise gr.Error("Couldn't analyze this posting. Please try again.")
-
-    if not resume_text.strip():
-        return format_job(job), "_Paste your resume to see your match score._", job.model_dump()
-
-    try:
+        if not resume_text:
+            return format_job(job), "_Paste your resume to see your match score._", job.model_dump()
         result = match_resume(job, resume_text)
-    except ValueError:
-        raise gr.Error("Couldn't compare with your resume. Please try again.")
+    except LLMError as error:
+        raise gr.Error(str(error))
 
     return format_job(job), format_match(job, result, resume_text), job.model_dump()
 

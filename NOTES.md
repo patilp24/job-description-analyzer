@@ -18,6 +18,16 @@
   - "Or" rule isn't followed every run (Google: strategy OR cross-functional split again)
   - Qualifications got wordier after raising the limit to 10 words (trade-off for keeping named skills)
 - Status column wraps awkwardly ("Missin g") in narrow layouts
+- Match prompt sends qualifications as "- item"; model copies the "- " into its output (cosmetic)
+- Red flags often repeat the checklist labels instead of specific evidence (jd2)
+- Model sometimes uses the degree alone as evidence, despite the prompt rule (jd2)
+- Extraction sometimes drops key requirements (jd3: "several years of production ML" missing; experience shown as "Not stated")
+- Keywords can include the job title (jd3: "AI Engineer")
+- Long "and" lists sometimes stay as one item and get full Met from partial evidence (jd4: 8 LLM concepts in one item)
+- Experience field format varies ("5" vs "5 years" vs "2+ years")
+- Degree sometimes appears in both the education field and the required list (jd5)
+- Required list length varies a lot between runs (jd5: 6 items now vs 8 before)
+- Meaning mismatches in judgments (jd5: "AI coding tools" met by Copilot Studio)
 
 ## Ideas
 - Extract resume roles with dates once, and calculate total experience in code
