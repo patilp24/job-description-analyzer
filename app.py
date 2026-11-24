@@ -6,6 +6,20 @@ from match import (match_resume, compute_score, missing_skills, confidence,
                    count_met, keyword_coverage)
 from schemas import JobExtraction, MatchResult
 
+
+# ZeroGPU Spaces require at least one @spaces.GPU function at startup.
+# This app does its AI work through the Gemini API, so this is never called.
+try:
+    import spaces
+
+    @spaces.GPU
+    def _zerogpu_placeholder():
+        return None
+except ImportError:
+    pass  # running locally, where the 'spaces' package isn't installed
+
+
+
 STATUS_ICON = {"Met": "✅", "Partial": "🟡", "Missing": "❌"}
 
 
