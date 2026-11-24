@@ -28,6 +28,8 @@
 - Degree sometimes appears in both the education field and the required list (jd5)
 - Required list length varies a lot between runs (jd5: 6 items now vs 8 before)
 - Meaning mismatches in judgments (jd5: "AI coding tools" met by Copilot Studio)
+- Match scores vary widely between runs for the same input (Google: 12 to 78 across 8 runs).
+  Likely fixes: temperature 0, splitting judgments into smaller calls, or averaging several runs.
 
 ## Ideas
 - Extract resume roles with dates once, and calculate total experience in code
